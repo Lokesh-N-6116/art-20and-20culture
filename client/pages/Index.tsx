@@ -140,8 +140,16 @@ export default function Index() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-luxury-purple-900 via-luxury-purple-800 to-luxury-purple-700">
-        <div className="absolute inset-0 bg-black/20"></div>
+      <section
+        className="relative py-20 bg-gradient-to-br from-luxury-purple-900 via-luxury-purple-800 to-luxury-purple-700"
+        style={{
+          backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F4c914b1db72147fd94d3c1315a6a5a5f%2F6bc5001e7f0e443aaa1ec138f9a425d4?format=webp&width=800')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-luxury-purple-900/80 via-luxury-purple-800/70 to-luxury-purple-700/80"></div>
         <div className="relative container mx-auto px-4 text-center">
           <h1 className="font-samarkan text-depth text-5xl md:text-7xl text-luxury-gold-400 mb-6">
             Discover India's
