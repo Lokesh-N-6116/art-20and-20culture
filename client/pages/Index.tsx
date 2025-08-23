@@ -55,11 +55,9 @@ function ProductCard({ product }: { product: Product }) {
         
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center space-x-2">
-            <img
-              src={product.seller.avatar}
-              alt={product.seller.name}
-              className="w-6 h-6 rounded-full"
-            />
+            <div className="w-6 h-6 rounded-full bg-luxury-purple-600 flex items-center justify-center">
+              <User className="w-3 h-3 text-white" />
+            </div>
             <span className="text-sm text-muted-foreground">{product.seller.name}</span>
             <VerifiedBadge seller={product.seller} />
           </div>
