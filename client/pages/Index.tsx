@@ -21,12 +21,13 @@ function VerifiedBadge({ seller }: { seller: any }) {
 function ProductCard({ product }: { product: Product }) {
   return (
     <Card className="group overflow-hidden border-luxury-silver-300 hover:border-luxury-gold-400 transition-all duration-300 hover:shadow-xl bg-card/80 backdrop-blur-sm">
-      <div className="relative overflow-hidden">
-        <img
-          src={product.images[0]}
-          alt={product.name}
-          className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
-        />
+      <div className="relative p-6 bg-gradient-to-br from-luxury-purple-100 to-luxury-gold-50 min-h-[200px] flex items-center justify-center">
+        <div className="text-center">
+          <h3 className="font-samarkan text-depth text-2xl text-luxury-purple-700 mb-2">
+            {product.artform}
+          </h3>
+          <p className="text-luxury-purple-600 font-medium">{product.state}</p>
+        </div>
         <div className="absolute top-3 right-3">
           <Button variant="secondary" size="icon" className="bg-white/90 hover:bg-white">
             <Heart className="h-4 w-4" />
