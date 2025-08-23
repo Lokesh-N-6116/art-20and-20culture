@@ -12,6 +12,11 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      'josefin': ['Josefin Sans', 'sans-serif'],
+      'samarkan': ['Samarkan', 'serif'],
+      'sans': ['Josefin Sans', 'system-ui', 'sans-serif'],
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -56,6 +61,45 @@ export default {
           "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
+        },
+        // SP Collections luxury theme
+        luxury: {
+          purple: {
+            50: "hsl(var(--luxury-purple-50))",
+            100: "hsl(var(--luxury-purple-100))",
+            200: "hsl(var(--luxury-purple-200))",
+            300: "hsl(var(--luxury-purple-300))",
+            400: "hsl(var(--luxury-purple-400))",
+            500: "hsl(var(--luxury-purple-500))",
+            600: "hsl(var(--luxury-purple-600))",
+            700: "hsl(var(--luxury-purple-700))",
+            800: "hsl(var(--luxury-purple-800))",
+            900: "hsl(var(--luxury-purple-900))",
+          },
+          gold: {
+            50: "hsl(var(--luxury-gold-50))",
+            100: "hsl(var(--luxury-gold-100))",
+            200: "hsl(var(--luxury-gold-200))",
+            300: "hsl(var(--luxury-gold-300))",
+            400: "hsl(var(--luxury-gold-400))",
+            500: "hsl(var(--luxury-gold-500))",
+            600: "hsl(var(--luxury-gold-600))",
+            700: "hsl(var(--luxury-gold-700))",
+            800: "hsl(var(--luxury-gold-800))",
+            900: "hsl(var(--luxury-gold-900))",
+          },
+          silver: {
+            50: "hsl(var(--luxury-silver-50))",
+            100: "hsl(var(--luxury-silver-100))",
+            200: "hsl(var(--luxury-silver-200))",
+            300: "hsl(var(--luxury-silver-300))",
+            400: "hsl(var(--luxury-silver-400))",
+            500: "hsl(var(--luxury-silver-500))",
+            600: "hsl(var(--luxury-silver-600))",
+            700: "hsl(var(--luxury-silver-700))",
+            800: "hsl(var(--luxury-silver-800))",
+            900: "hsl(var(--luxury-silver-900))",
+          },
         },
       },
       borderRadius: {
