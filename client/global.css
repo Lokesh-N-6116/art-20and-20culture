@@ -9,33 +9,67 @@
    * A different format will require also updating the theme in tailwind.config.ts.
   */
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 265 85% 8%;
+    --foreground: 45 100% 85%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* SP Collections Luxury Theme */
+    --luxury-purple-50: 270 100% 98%;
+    --luxury-purple-100: 269 100% 95%;
+    --luxury-purple-200: 269 100% 92%;
+    --luxury-purple-300: 269 87% 85%;
+    --luxury-purple-400: 270 84% 75%;
+    --luxury-purple-500: 270 91% 65%;
+    --luxury-purple-600: 271 81% 56%;
+    --luxury-purple-700: 272 72% 47%;
+    --luxury-purple-800: 273 67% 39%;
+    --luxury-purple-900: 274 66% 32%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --luxury-gold-50: 48 100% 96%;
+    --luxury-gold-100: 48 96% 89%;
+    --luxury-gold-200: 48 97% 77%;
+    --luxury-gold-300: 46 97% 65%;
+    --luxury-gold-400: 43 96% 56%;
+    --luxury-gold-500: 37 92% 50%;
+    --luxury-gold-600: 32 95% 44%;
+    --luxury-gold-700: 26 90% 37%;
+    --luxury-gold-800: 23 83% 31%;
+    --luxury-gold-900: 22 78% 26%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --luxury-silver-50: 210 20% 98%;
+    --luxury-silver-100: 220 14% 96%;
+    --luxury-silver-200: 220 13% 91%;
+    --luxury-silver-300: 216 12% 84%;
+    --luxury-silver-400: 218 11% 65%;
+    --luxury-silver-500: 220 9% 46%;
+    --luxury-silver-600: 215 14% 34%;
+    --luxury-silver-700: 217 19% 27%;
+    --luxury-silver-800: 215 28% 17%;
+    --luxury-silver-900: 221 39% 11%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --card: 265 50% 15%;
+    --card-foreground: 45 100% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --popover: 265 50% 15%;
+    --popover-foreground: 45 100% 85%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --primary: 37 92% 50%;
+    --primary-foreground: 265 85% 8%;
+
+    --secondary: 220 9% 46%;
+    --secondary-foreground: 45 100% 85%;
+
+    --muted: 265 30% 20%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 270 91% 65%;
+    --accent-foreground: 45 100% 85%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 9% 46%;
+    --input: 265 50% 15%;
+    --ring: 37 92% 50%;
 
     --radius: 0.5rem;
 
@@ -57,33 +91,33 @@
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 265 85% 4%;
+    --foreground: 45 100% 90%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 265 50% 8%;
+    --card-foreground: 45 100% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 265 50% 8%;
+    --popover-foreground: 45 100% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 37 92% 55%;
+    --primary-foreground: 265 85% 4%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 9% 40%;
+    --secondary-foreground: 45 100% 90%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 265 30% 12%;
+    --muted-foreground: 220 9% 60%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 270 91% 70%;
+    --accent-foreground: 45 100% 90%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 220 9% 40%;
+    --input: 265 50% 8%;
+    --ring: 37 92% 55%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
