@@ -13,9 +13,9 @@ export default {
       },
     },
     fontFamily: {
-      'josefin': ['Josefin Sans', 'sans-serif'],
-      'samarkan': ['Samarkan', 'serif'],
-      'sans': ['Josefin Sans', 'system-ui', 'sans-serif'],
+      josefin: ["Josefin Sans", "sans-serif"],
+      samarkan: ["Samarkan", "serif"],
+      sans: ["Josefin Sans", "system-ui", "sans-serif"],
     },
     extend: {
       colors: {

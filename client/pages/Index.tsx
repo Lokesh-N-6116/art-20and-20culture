@@ -4,7 +4,15 @@ import { SAMPLE_PRODUCTS, Product } from "@shared/products";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Star, Verified, ShoppingCart, Heart, Search, User, Menu } from "lucide-react";
+import {
+  Star,
+  Verified,
+  ShoppingCart,
+  Heart,
+  Search,
+  User,
+  Menu,
+} from "lucide-react";
 
 function VerifiedBadge({ seller }: { seller: any }) {
   if (seller.totalSales >= 3) {
@@ -29,7 +37,11 @@ function ProductCard({ product }: { product: Product }) {
           <p className="text-luxury-purple-600 font-medium">{product.state}</p>
         </div>
         <div className="absolute top-3 right-3">
-          <Button variant="secondary" size="icon" className="bg-white/90 hover:bg-white">
+          <Button
+            variant="secondary"
+            size="icon"
+            className="bg-white/90 hover:bg-white"
+          >
             <Heart className="h-4 w-4" />
           </Button>
         </div>
@@ -45,30 +57,36 @@ function ProductCard({ product }: { product: Product }) {
             <h3 className="font-semibold text-lg text-foreground mb-1 line-clamp-1">
               {product.name}
             </h3>
-            <p className="text-sm text-luxury-silver-600 mb-2">{product.artform} • {product.state}</p>
+            <p className="text-sm text-luxury-silver-600 mb-2">
+              {product.artform} • {product.state}
+            </p>
           </div>
         </div>
-        
+
         <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
           {product.description}
         </p>
-        
+
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center space-x-2">
             <div className="w-6 h-6 rounded-full bg-luxury-purple-600 flex items-center justify-center">
               <User className="w-3 h-3 text-white" />
             </div>
-            <span className="text-sm text-muted-foreground">{product.seller.name}</span>
+            <span className="text-sm text-muted-foreground">
+              {product.seller.name}
+            </span>
             <VerifiedBadge seller={product.seller} />
           </div>
         </div>
-        
+
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
             <span className="text-2xl font-bold text-luxury-gold-600">
               ₹{product.price.toLocaleString()}
             </span>
-            <span className="text-xs text-muted-foreground">Export Price Available</span>
+            <span className="text-xs text-muted-foreground">
+              Export Price Available
+            </span>
           </div>
           <Button className="bg-luxury-purple-600 hover:bg-luxury-purple-700 text-white">
             <ShoppingCart className="h-4 w-4 mr-2" />
@@ -102,7 +120,7 @@ export default function Index() {
                 Traditional Indian Artforms
               </p>
             </div>
-            
+
             <div className="hidden md:flex items-center space-x-6">
               <div className="relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
@@ -116,7 +134,7 @@ export default function Index() {
               <Button variant="ghost">States</Button>
               <Button variant="ghost">Artists</Button>
             </div>
-            
+
             <div className="flex items-center space-x-3">
               <Button variant="ghost" size="icon">
                 <Heart className="h-5 w-5" />
@@ -143,9 +161,9 @@ export default function Index() {
         className="relative py-20 bg-gradient-to-br from-luxury-purple-900 via-luxury-purple-800 to-luxury-purple-700"
         style={{
           backgroundImage: `url('https://cdn.builder.io/api/v1/image/assets%2F4c914b1db72147fd94d3c1315a6a5a5f%2F6bc5001e7f0e443aaa1ec138f9a425d4?format=webp&width=800')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat'
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-luxury-purple-900/80 via-luxury-purple-800/70 to-luxury-purple-700/80"></div>
@@ -156,14 +174,21 @@ export default function Index() {
             Hidden Treasures
           </h1>
           <p className="text-xl md:text-2xl text-luxury-gold-100 mb-8 max-w-3xl mx-auto">
-            Authentic traditional artforms from every corner of India. Support local artisans 
-            and preserve centuries-old cultural heritage.
+            Authentic traditional artforms from every corner of India. Support
+            local artisans and preserve centuries-old cultural heritage.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-luxury-gold-500 hover:bg-luxury-gold-600 text-luxury-purple-900 font-semibold px-8">
+            <Button
+              size="lg"
+              className="bg-luxury-gold-500 hover:bg-luxury-gold-600 text-luxury-purple-900 font-semibold px-8"
+            >
               Explore Collections
             </Button>
-            <Button size="lg" variant="outline" className="border-luxury-gold-400 text-luxury-gold-400 hover:bg-luxury-gold-400 hover:text-luxury-purple-900">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-luxury-gold-400 text-luxury-gold-400 hover:bg-luxury-gold-400 hover:text-luxury-purple-900"
+            >
               Become a Seller
             </Button>
           </div>
@@ -178,19 +203,24 @@ export default function Index() {
               Featured Artforms
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Discover authentic pieces from master artisans across India. Each piece tells a story 
-              of tradition, culture, and artistic excellence.
+              Discover authentic pieces from master artisans across India. Each
+              piece tells a story of tradition, culture, and artistic
+              excellence.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProducts.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
-            <Button size="lg" variant="outline" className="border-luxury-purple-600 text-luxury-purple-600 hover:bg-luxury-purple-600 hover:text-white">
+            <Button
+              size="lg"
+              variant="outline"
+              className="border-luxury-purple-600 text-luxury-purple-600 hover:bg-luxury-purple-600 hover:text-white"
+            >
               View All Products
             </Button>
           </div>
@@ -205,48 +235,56 @@ export default function Index() {
               Preserving Heritage
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Many traditional Indian folk artforms like Warli, Pithora, and Madhubani are at risk 
-              of being forgotten. By purchasing these authentic pieces, you're helping preserve 
-              cultural heritage for future generations.
+              Many traditional Indian folk artforms like Warli, Pithora, and
+              Madhubani are at risk of being forgotten. By purchasing these
+              authentic pieces, you're helping preserve cultural heritage for
+              future generations.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="border-luxury-silver-300 bg-card/80 backdrop-blur-sm">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-luxury-gold-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Verified className="w-8 h-8 text-luxury-purple-900" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Authentic Artforms</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  Authentic Artforms
+                </h3>
                 <p className="text-muted-foreground">
-                  Every piece is verified authentic and created by traditional artisans using 
-                  age-old techniques passed down through generations.
+                  Every piece is verified authentic and created by traditional
+                  artisans using age-old techniques passed down through
+                  generations.
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="border-luxury-silver-300 bg-card/80 backdrop-blur-sm">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-luxury-silver-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Star className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Export Quality</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  Export Quality
+                </h3>
                 <p className="text-muted-foreground">
-                  All products are prepared for international shipping with proper packaging 
-                  and documentation for global art collectors.
+                  All products are prepared for international shipping with
+                  proper packaging and documentation for global art collectors.
                 </p>
               </CardContent>
             </Card>
-            
+
             <Card className="border-luxury-silver-300 bg-card/80 backdrop-blur-sm">
               <CardContent className="p-6 text-center">
                 <div className="w-16 h-16 bg-luxury-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Heart className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">Support Artisans</h3>
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  Support Artisans
+                </h3>
                 <p className="text-muted-foreground">
-                  Your purchase directly supports traditional artisans and their families, 
-                  helping preserve these beautiful art forms.
+                  Your purchase directly supports traditional artisans and their
+                  families, helping preserve these beautiful art forms.
                 </p>
               </CardContent>
             </Card>
@@ -263,44 +301,137 @@ export default function Index() {
                 SP Collections
               </h3>
               <p className="text-sm text-luxury-silver-300">
-                Connecting the world with India's rich cultural heritage through authentic 
-                traditional artforms.
+                Connecting the world with India's rich cultural heritage through
+                authentic traditional artforms.
               </p>
             </div>
-            
+
             <div>
-              <h4 className="font-semibold text-luxury-gold-400 mb-4">Categories</h4>
+              <h4 className="font-semibold text-luxury-gold-400 mb-4">
+                Categories
+              </h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-luxury-gold-400 transition-colors">Paintings</a></li>
-                <li><a href="#" className="hover:text-luxury-gold-400 transition-colors">Textiles</a></li>
-                <li><a href="#" className="hover:text-luxury-gold-400 transition-colors">Sculptures</a></li>
-                <li><a href="#" className="hover:text-luxury-gold-400 transition-colors">Jewelry</a></li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-luxury-gold-400 transition-colors"
+                  >
+                    Paintings
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-luxury-gold-400 transition-colors"
+                  >
+                    Textiles
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-luxury-gold-400 transition-colors"
+                  >
+                    Sculptures
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-luxury-gold-400 transition-colors"
+                  >
+                    Jewelry
+                  </a>
+                </li>
               </ul>
             </div>
-            
+
             <div>
-              <h4 className="font-semibold text-luxury-gold-400 mb-4">Support</h4>
+              <h4 className="font-semibold text-luxury-gold-400 mb-4">
+                Support
+              </h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-luxury-gold-400 transition-colors">Help Center</a></li>
-                <li><a href="#" className="hover:text-luxury-gold-400 transition-colors">Shipping Info</a></li>
-                <li><a href="#" className="hover:text-luxury-gold-400 transition-colors">Returns</a></li>
-                <li><a href="#" className="hover:text-luxury-gold-400 transition-colors">Contact Us</a></li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-luxury-gold-400 transition-colors"
+                  >
+                    Help Center
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-luxury-gold-400 transition-colors"
+                  >
+                    Shipping Info
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-luxury-gold-400 transition-colors"
+                  >
+                    Returns
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-luxury-gold-400 transition-colors"
+                  >
+                    Contact Us
+                  </a>
+                </li>
               </ul>
             </div>
-            
+
             <div>
-              <h4 className="font-semibold text-luxury-gold-400 mb-4">Connect</h4>
+              <h4 className="font-semibold text-luxury-gold-400 mb-4">
+                Connect
+              </h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-luxury-gold-400 transition-colors">Facebook</a></li>
-                <li><a href="#" className="hover:text-luxury-gold-400 transition-colors">Instagram</a></li>
-                <li><a href="#" className="hover:text-luxury-gold-400 transition-colors">Twitter</a></li>
-                <li><a href="#" className="hover:text-luxury-gold-400 transition-colors">Pinterest</a></li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-luxury-gold-400 transition-colors"
+                  >
+                    Facebook
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-luxury-gold-400 transition-colors"
+                  >
+                    Instagram
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-luxury-gold-400 transition-colors"
+                  >
+                    Twitter
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-luxury-gold-400 transition-colors"
+                  >
+                    Pinterest
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
-          
+
           <div className="border-t border-luxury-silver-700 mt-8 pt-8 text-center text-sm text-luxury-silver-400">
-            <p>&copy; 2024 SP Collections. All rights reserved. Preserving India's cultural heritage.</p>
+            <p>
+              &copy; 2024 SP Collections. All rights reserved. Preserving
+              India's cultural heritage.
+            </p>
           </div>
         </div>
       </footer>

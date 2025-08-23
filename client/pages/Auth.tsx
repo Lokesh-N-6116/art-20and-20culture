@@ -1,6 +1,12 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Separator } from "@/components/ui/separator";
@@ -32,10 +38,13 @@ export default function Auth() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-luxury-purple-900 via-luxury-purple-800 to-luxury-purple-700">
       <div className="absolute inset-0 bg-black/20"></div>
-      
+
       {/* Header */}
       <div className="relative z-10 p-6">
-        <Link to="/" className="inline-flex items-center text-luxury-gold-400 hover:text-luxury-gold-300 transition-colors">
+        <Link
+          to="/"
+          className="inline-flex items-center text-luxury-gold-400 hover:text-luxury-gold-300 transition-colors"
+        >
           <ArrowLeft className="w-4 h-4 mr-2" />
           Back to SP Collections
         </Link>
@@ -49,24 +58,25 @@ export default function Auth() {
               <h1 className="font-samarkan text-depth text-3xl text-luxury-gold-600">
                 SP Collections
               </h1>
-              <p className="text-sm text-muted-foreground">Traditional Indian Artforms</p>
+              <p className="text-sm text-muted-foreground">
+                Traditional Indian Artforms
+              </p>
             </div>
             <CardTitle className="text-2xl font-semibold">
               {isSignUp ? "Create Account" : "Welcome Back"}
             </CardTitle>
             <CardDescription>
-              {isSignUp 
+              {isSignUp
                 ? "Join our community of art enthusiasts and traditional craftsmen"
-                : "Sign in to your account to continue shopping"
-              }
+                : "Sign in to your account to continue shopping"}
             </CardDescription>
           </CardHeader>
-          
+
           <CardContent className="space-y-4">
             {/* Social Auth Buttons */}
             <div className="space-y-3">
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="w-full border-luxury-silver-300 hover:bg-luxury-silver-50"
                 onClick={handleGoogleAuth}
               >
@@ -90,9 +100,9 @@ export default function Auth() {
                 </svg>
                 Continue with Google
               </Button>
-              
-              <Button 
-                variant="outline" 
+
+              <Button
+                variant="outline"
                 className="w-full border-luxury-silver-300 hover:bg-luxury-silver-50"
                 onClick={handleFacebookAuth}
               >
@@ -127,7 +137,7 @@ export default function Auth() {
                   </div>
                 </div>
               )}
-              
+
               <div className="space-y-2">
                 <Label htmlFor="email">Email</Label>
                 <div className="relative">
@@ -143,7 +153,7 @@ export default function Auth() {
                   />
                 </div>
               </div>
-              
+
               <div className="space-y-2">
                 <Label htmlFor="password">Password</Label>
                 <div className="relative">
@@ -159,9 +169,9 @@ export default function Auth() {
                   />
                 </div>
               </div>
-              
-              <Button 
-                type="submit" 
+
+              <Button
+                type="submit"
                 className="w-full bg-luxury-gold-500 hover:bg-luxury-gold-600 text-luxury-purple-900 font-semibold"
               >
                 {isSignUp ? "Create Account" : "Sign In"}
@@ -170,7 +180,9 @@ export default function Auth() {
 
             <div className="text-center text-sm">
               <span className="text-muted-foreground">
-                {isSignUp ? "Already have an account?" : "Don't have an account?"}
+                {isSignUp
+                  ? "Already have an account?"
+                  : "Don't have an account?"}
               </span>{" "}
               <button
                 type="button"
