@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { SAMPLE_PRODUCTS, Product } from "@shared/products";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -124,10 +125,12 @@ export default function Index() {
               <Button variant="ghost" size="icon">
                 <ShoppingCart className="h-5 w-5" />
               </Button>
-              <Button variant="outline" className="hidden md:flex">
-                <User className="h-4 w-4 mr-2" />
-                Sign In
-              </Button>
+              <Link to="/auth">
+                <Button variant="outline" className="hidden md:flex">
+                  <User className="h-4 w-4 mr-2" />
+                  Sign In
+                </Button>
+              </Link>
               <Button className="md:hidden" variant="ghost" size="icon">
                 <Menu className="h-5 w-5" />
               </Button>
